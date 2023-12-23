@@ -1,0 +1,95 @@
+<ion-content>
+  <!-- Header Section -->
+  <div style="background-color: #ed576b; color: white;">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 0px 10px 0px 10px;">
+      <div>
+        <h6>FIRSTCLASS MENTOR</h6>
+        <p>sai vinay</p>
+        <small>Default process</small>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <ion-icon name="cafe-outline" size="large"></ion-icon>
+        <ion-icon name="power-outline" size="large" [routerLink]="['/login']"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Chips -->
+  <div style="display: flex; gap:3px; padding:5px;">
+    <ion-chip [outline]="true" style="background-color: #ed576b; color:white;">Today</ion-chip>
+    <ion-chip [outline]="true">Last 7 Days</ion-chip>
+    <ion-chip [outline]="true">Last 30 Days</ion-chip>
+    <ion-chip [outline]="true">Select All</ion-chip>
+  </div>
+
+  <!-- Inbound Section -->
+  <div style="padding: 0px; margin: 0px;">
+    <div style="padding-left: 20px;"><p>INBOUND</p></div>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let each of cardArr" size="6">
+          <ion-card style="display: flex; justify-content: center; align-items: center;"> 
+          <div style="padding: 10px;">
+            <div style="display: flex; justify-content: center; align-items: center; ">
+              <ion-icon color="danger" name="{{each.icon}}"></ion-icon>
+            </div>   
+              <ion-card-content>
+                <div>
+                  <p>{{each.name}}</p>
+                  <p>{{each.description}}</p>
+                </div>
+              </ion-card-content>
+             
+          </div>
+              
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Time Arr Section -->
+  <div style="width: 100%;">
+    <ion-card>
+      <ion-item *ngFor="let each of timeArr">
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+          <div>
+            <p>{{each.text}}</p>
+          </div>
+          <div>
+            <p>{{each.time}}</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-card>
+  </div>
+
+  <!-- Status Section -->
+  <div style="display: flex; justify-content: space-between; width: 100%;padding: 0px 15px 0px 15px;">
+    <div>
+      <p>Status</p>
+    </div>
+    <div style="display: flex; align-items: center; gap: 5px;">
+      <p>all</p>
+      <ion-toggle size="small" color="danger"></ion-toggle>
+      <p>unique</p>
+    </div>
+  </div>
+
+  <!-- Call Log Arr Section -->
+  <div style="width: 100%;">
+    <ion-card>
+      <ion-item *ngFor="let each of callLogArr">
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+          <div>
+            <p>{{each.text}}</p>
+          </div>
+          <div>
+            <p>{{each.time}}</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-card>
+  </div>
+
+</ion-content>

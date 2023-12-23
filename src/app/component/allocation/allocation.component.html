@@ -1,0 +1,43 @@
+<ion-header>
+    <div style="display: flex; justify-content: space-between; width: 100%; background-color:#ed576b ;color: white;padding:0px 20px 0px 20px;" >
+      <div style="display: flex; align-items: center;">
+        <p>Allocation</p>
+      </div>
+      <div style="display: flex; align-items: center; gap:5px;">
+        <ion-icon name="search-outline" size="large"></ion-icon>
+        <ion-icon name="call-outline" size="large"></ion-icon>
+        <ion-icon name="options-outline" size="large"></ion-icon>
+        <ion-icon name="people-circle-outline" size="large"></ion-icon>
+      </div>
+    </div>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let each of allocationArr" size="12" style="padding: 0px; margin: 0px;">
+          <ion-card style="padding: 0px 10px 0px 10px; ">    
+            <div style="display: flex; width: 100%; justify-content:space-between">
+              <div>
+                <div style="margin: 0px;padding: 0px;">
+                  <p>{{each.type}}</p>
+                  <p>{{each.name}}</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; justify-content: space-around; align-items: center; gap:5px;">
+                <div>
+                  <div>
+                    <p>{{each.dateTime}}</p>
+                    <p>{{each.by}}</p>
+                  </div>
+                </div>
+                <ion-icon color="danger" name="call-outline" size="large"></ion-icon>
+              </div>
+  
+            </div>  
+          </ion-card>     
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

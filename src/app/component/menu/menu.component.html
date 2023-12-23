@@ -1,0 +1,25 @@
+<ion-header>
+<div style="width: 100%;background-color: #ed576b; color: white; padding: 15px;">
+Menu
+</div>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row>
+        <ion-col *ngFor="let each of cardArr" size="6">
+          <ion-card style="display: flex;justify-content: center; align-items: center; padding:10px;"> 
+            <div style="width: 100%;">
+              <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <ion-icon color={{each.color}} name="{{each.icon}}" size="large"></ion-icon>
+
+              </div>
+              <div style="width: 100%; display: flex; justify-content: center; text-align: center;">
+                <p>{{each.name}}</p>
+              </div>
+            </div>     
+          </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
